@@ -278,7 +278,7 @@ class Webhooks extends Page implements HasSchemas, HasTable
                     'header' => $record->header,
                     'data_option' => $record->data_option,
                     'verifySsl' => $record->verifySsl,
-                    'secret' => $record->secret
+                    'secret' => $record->secret,
                     'events' => $record->events,
                 ]))
                 ->modalFooterActionsAlignment(Alignment::End)

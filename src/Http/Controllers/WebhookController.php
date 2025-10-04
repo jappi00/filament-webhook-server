@@ -22,7 +22,7 @@ class WebhookController extends BaseController
             'header' => ['sometimes', 'required', 'string'],
             'data_option' => ['required', 'string', 'in:all,summary,custom'],
             'verifySsl' => ['required', 'boolean'],
-            'secret' => ['required', 'string']
+            'secret' => ['required', 'string'],
             'events' => ['required', 'array'],
             'events.*' => ['required', 'string', 'min:1', 'in:created,updated,deleted,restored,forceDeleted'],
         ]);
