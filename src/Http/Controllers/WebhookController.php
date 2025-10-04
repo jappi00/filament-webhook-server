@@ -22,6 +22,7 @@ class WebhookController extends BaseController
             'header' => ['sometimes', 'required', 'string'],
             'data_option' => ['required', 'string', 'in:all,summary,custom'],
             'verifySsl' => ['required', 'boolean'],
+            'secret' => ['required', 'string']
             'events' => ['required', 'array'],
             'events.*' => ['required', 'string', 'min:1', 'in:created,updated,deleted,restored,forceDeleted'],
         ]);
@@ -67,6 +68,7 @@ class WebhookController extends BaseController
                 'header' => ['sometimes', 'required', 'string'],
                 'data_option' => ['sometimes', 'required', 'string', 'in:all,summary,custom'],
                 'verifySsl' => ['sometimes', 'required', 'boolean'],
+                'secret' => ['required', 'string'],
                 'events' => ['sometimes', 'required', 'array'],
                 'events.*' => ['sometimes', 'required', 'string', 'min:1', 'in:created,updated,deleted,restored,forceDeleted'],
             ]);

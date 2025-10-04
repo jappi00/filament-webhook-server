@@ -201,7 +201,6 @@ class Webhooks extends Page implements HasSchemas, HasTable
                         ->password()
                         ->required()
                         ->copyable()
-                        ->default(fn() => Str::password(30))
                 ]
                 ),
         ]);
@@ -279,6 +278,7 @@ class Webhooks extends Page implements HasSchemas, HasTable
                     'header' => $record->header,
                     'data_option' => $record->data_option,
                     'verifySsl' => $record->verifySsl,
+                    'secret' => $record->secret
                     'events' => $record->events,
                 ]))
                 ->modalFooterActionsAlignment(Alignment::End)
