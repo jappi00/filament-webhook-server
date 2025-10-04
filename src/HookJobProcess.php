@@ -25,7 +25,7 @@ class HookJobProcess
                 ->verifySsl($webhookClient->verifySsl)
                 ->withHeaders($webhookClient->header)
                 ->payload([$this->payload($this->model, $this->event, $this->module, $webhookClient->data_option)])
-                ->dispatchSync();
+                ->dispatch();
         }
     }
 }
