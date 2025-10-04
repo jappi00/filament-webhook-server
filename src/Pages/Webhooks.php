@@ -116,6 +116,7 @@ class Webhooks extends Page implements HasSchemas, HasTable
             'data_option' => $this->data['data_option'],
             'events' => $this->data['events'],
             'verifySsl' => $this->data['verifySsl'],
+            'secret' => $this->data['secret'],
         ]);
 
         $this->dispatch('close-modal', id: 'create-webhook');
