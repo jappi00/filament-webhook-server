@@ -17,6 +17,7 @@ class FilamentWebhookServer extends Model
         'verifySsl',
         'status',
         'events',
+        'secret'
     ];
 
     public function transactionlogs()
