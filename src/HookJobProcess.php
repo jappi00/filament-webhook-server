@@ -25,7 +25,7 @@ class HookJobProcess
                 ->withHeaders($webhookClient->header)
                 ->useSecret(config('webhook-server.webhook_secret'))
                 ->payload([$this->payload($this->model, $this->event, $this->module, $webhookClient->data_option)])
-                ->dispatchSync();
+                ->dispatch();
         }
     }
 }
