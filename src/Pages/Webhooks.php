@@ -200,6 +200,7 @@ class Webhooks extends Page implements HasSchemas, HasTable
                     TextInput::make('secret')
                         ->password()
                         ->required()
+                        ->copyable()
                         ->default(fn() => Str::password(30))
                 ]
                 ),
