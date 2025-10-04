@@ -20,7 +20,6 @@ class HookJobProcess
                 ->url($webhookClient->url)
                 ->maximumTries(3)
                 ->meta(['webhookClient' => $webhookClient->id])
-                ->doNotSign()
                 ->useHttpVerb($webhookClient->method)
                 ->verifySsl($webhookClient->verifySsl)
                 ->withHeaders($webhookClient->header)
