@@ -50,22 +50,4 @@ class WebhookPlugin implements Plugin
             app()->register(EventServiceProvider::class);
         }
     }
-
-    public function boot(Panel $panel): void
-    {
-        if ($this->isEnabled()) {
-            $models = $this->getModels();
-            foreach ($models as $model) {
-                if (class_exists($model)) {
-                    try {
-                        $model::observe(ModelObserver::class);
-                    } catch (Exception $e) {
-                        logger()->warning('Failed to register observer for model: '.$model, [
-                            'error' => $e->getMessage(),
-                        ]);
-                    }
-                }
-            }
-        }
-    }
 }
