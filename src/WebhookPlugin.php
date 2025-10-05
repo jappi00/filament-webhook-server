@@ -50,4 +50,8 @@ class WebhookPlugin implements Plugin
             app()->register(EventServiceProvider::class);
         }
     }
+
+    public function boot(Panel $panel): void
+    {
+    }
 }
