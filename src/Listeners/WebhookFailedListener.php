@@ -5,13 +5,13 @@ namespace Marjose123\FilamentWebhookServer\Listeners;
 use Exception;
 use Marjose123\FilamentWebhookServer\Models\FilamentWebhookServerHistory;
 use Marjose123\FilamentWebhookServer\WebhookPlugin;
-use Spatie\WebhookServer\Events\WebhookCallFailedEvent;
+use Spatie\WebhookServer\Events\FinalWebhookCallFailedEvent; 
 
 class WebhookFailedListener
 {
     public function __construct() {}
 
-    public function handle(WebhookCallFailedEvent $event): void
+    public function handle(FinalWebhookCallFailedEvent $event): void
     {
         if (WebhookPlugin::get()->canKeepLogs()) {
             try {
